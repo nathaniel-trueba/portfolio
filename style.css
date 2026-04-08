@@ -39,6 +39,18 @@ nav a:hover {
   padding-bottom: 0.1em;
 }
 
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
 input,
 textarea,
 button {
@@ -48,12 +60,6 @@ button {
   box-sizing: border-box;
 }
 
-label {
-  display: block;
-  margin-block: 0.5em;
-}
-
-form {
-  display: grid;
-  grid-template-columns: auto 1fr;
+button {
+  grid-column: 1 / -1;
 }
