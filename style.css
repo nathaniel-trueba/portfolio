@@ -90,10 +90,10 @@ h1 {
 }
 
 .resume {
-  max-width: 70 ch;
+  max-width: 70ch;
   margin-inline: auto;
   padding: 2em;
   background: oklch(89.094% 0.02479 83.39);
-  border: 1 px solid oklch(80% 3% 200);
+  border: 1px solid oklch(80% 3% 200);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
