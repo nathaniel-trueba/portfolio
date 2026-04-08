@@ -88,3 +88,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 400%;
 }
+
+.resume {
+  max-width: 70 ch;
+  margin-inline: auto;
+  padding: 2em;
+  background: white;
+  border: 1 px solid oklch(80% 3% 200);
+  box-shadow: 0 4px 20 px rgba(0,0,0,0.1);
+}
