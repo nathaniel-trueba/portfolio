@@ -93,7 +93,7 @@ h1 {
   max-width: 70 ch;
   margin-inline: auto;
   padding: 2em;
-  background: oklch(94.691% 0.02257 78.163 / 0.926);
+  background: oklch(89.094% 0.02479 83.39);
   border: 1 px solid oklch(80% 3% 200);
-  box-shadow: 0 4px 20 px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
