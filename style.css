@@ -11,6 +11,9 @@ body {
 nav {
   display: flex;
   margin-bottom: 0.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200);
 }
 
 nav a {
@@ -19,4 +22,9 @@ nav a {
   color: inherit;
   text-align: center;
   padding:0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
 }
