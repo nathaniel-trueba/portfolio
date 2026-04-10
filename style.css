@@ -98,6 +98,24 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.resume-header{
+.resume-header {
   text-align: center;
+}
+
+.resume-header a {
+  text-decoration: none;
+}
+
+.resume-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.resume-row p {
+    margin: 0;
+}
+
+.resume-row time {
+    white-space: nowrap;
 }
