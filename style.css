@@ -20,7 +20,7 @@ body {
 nav {
   display: flex;
   margin-bottom: 0.5em;
-  --border-bottom: 1px solid var(--border-color)
+  --border-bottom: 1px solid var(--border-color);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(80% 3% 200);
@@ -59,7 +59,8 @@ label {
 
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
   display: block;
   width: 100%;
@@ -124,4 +125,20 @@ h1 {
 
 .resume-row time {
     white-space: nowrap;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .resume {
+    background: oklch(47.986% 0.0951 238.941 / 0.609);
+  }
 }

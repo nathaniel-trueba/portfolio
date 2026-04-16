@@ -8,21 +8,27 @@
 </head>
 <body>
     <h1>Contact</h1>
+    
     <form action="mailto:ntrueba@ucsd.edu" method="post" enctype="text/plain">
         <label>
-            Email:
-            <input name="email" type="email" value="example@domain.com">
-        </label>
-        <label>
             Subject:
-            <input name="subject" value="Placeholder Subject">
+            <input 
+                name="subject" 
+                type="text"
+                placeholder="Enter a subject">
         </label>
+
         <label>
             Message:
-            <textarea name="body">This is a test message.</textarea>
+            <textarea
+            name="body"
+            type="text"
+            placeholder="Enter your message here."></textarea>
         </label>
-        <button>Submit</button>
+
+        <button type="submit">Send</button>
     </form>
+
     <script type="module" src="../global.js"></script>
 </body>
 </html>
