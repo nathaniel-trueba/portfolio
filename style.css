@@ -137,8 +137,32 @@ h1 {
   align-items: center;
 }
 
+@media (prefers-color-scheme: light) {
+  .resume {
+    background: oklch(98.052% 0.01696 84.551 / 0.524);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .resume {
     background: oklch(47.986% 0.0951 238.941 / 0.609);
   }
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: gray;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  font-size: 2em;
+  margin: 0;
 }
