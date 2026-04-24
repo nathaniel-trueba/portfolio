@@ -1,22 +1,74 @@
 [
   {
     "title": "TumorSense",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "TumorSense is a classification model that predicts whether a tumor is benign or malignant. The model uses support vector machines with a radial basis function to map data into a higher dimensional space to find an optimal decision boundary."
   },
   {
     "title": "TubeScope",
+    "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "TubeScope is a data collection and machine learning platform that tracks YouTube Trending videos and predicts whether a video will remain on the trending page for more than one day. This is designed to be a B2B service for advertisers and creators to optimize marketing decisions."
   },
   {
     "title": "San Diego Surf Prediction",
+    "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "I built a dashboard that scores data from NOAA buoys into a Surf Quality Index to detect 2–4 hour best surf windows. This project is specific to the North San Diego area to provide accurate forecasting for UCSD students and surf lessons done through the recreation department."
   },
   {
     "title": "NAVFAC Flood Modeling",
+    "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Using geospatial tools and LiDAR point clouds, I reclassified points, built elevation and surface models to simulate flooding at Navy bases around the world. This project was a contract conducted by the Navy through the Scripps Institution of Oceanography."
+  },
+  {
+    "title": "Exploratory Data Analysis: Climate Trends",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Performed exploratory data analysis on NOAA historical climate datasets to identify long-term temperature and precipitation trends across the Western United States."
+  },
+  {
+    "title": "Regression Analysis: Housing Prices",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Built and evaluated multiple linear regression models to predict housing prices in San Diego County using features such as square footage, proximity to coast, and school district ratings."
+  },
+  {
+    "title": "Lorem ipsum dolor sit amet.",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+  },
+  {
+    "title": "Consectetur adipisicing elit.",
+    "year": "2024",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Consectetur adipisicing elit. Quod repellendus iure repellat quae maxime, modi incidunt perspiciatis, natus voluptate, quam molestiae similique reprehenderit neque eius deserunt dolorum expedita nostrum voluptatibus."
+  },
+  {
+    "title": "Quisquam voluptatem quaerat.",
+    "year": "2023",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Quisquam voluptatem quaerat architecto impedit exercitationem magni. Quasi enim perspiciatis hic velit tempore aliquam iste pariatur tempora minima necessitatibus dicta commodi doloribus voluptatibus numquam quis ducimus."
+  },
+  {
+    "title": "Perspiciatis unde omnis iste.",
+    "year": "2022",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+  },
+  {
+    "title": "Nemo enim ipsam voluptatem.",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est qui dolorem."
+  },
+  {
+    "title": "Ut labore et dolore magnam.",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur quis autem vel."
   }
 ]
