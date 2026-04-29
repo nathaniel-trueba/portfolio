@@ -14,7 +14,7 @@
 
     <section>
         <h2>Proposition</h2>
-        <p>[Proposition here.]</p>
+        <p>The narrative of an accelerating climate crisis is completely accurate; global warming is an urgently accelerating threat driven by a steep, continuous rise in global surface temperatures. (Note: Visualization 1 argues FOR this proposition by emphasizing the dramatic climb in temperatures, while Visualization 2 argues AGAINST this proposition by framing the warming as overstated and plateauing).</p>
     </section>
 
     <section>
@@ -23,7 +23,9 @@
             <img src="vis1.png" alt="Visualization 1" style="width: 650px; max-width: 100%;">
             <figcaption>
                 <strong>Design decisions & rationale:</strong>
-                [Explain design choices here. Use 3 points.]
+                We intentionally bounded the x-axis to start at the year 1985. Because 1985 represents a relative dip in historical temperature change, starting the chart here artificially makes the subsequent upward slope look much steeper and more aggressive. While we considered plotting the entire available history of the dataset, truncating the timeline to this specific window maximizes the visual impact and urgency of the warming trend, omitting the more gradual fluctuations of earlier decades.
+                The y-axis is tightly bounded between 0.00 and 2.00. By restricting the vertical axis to perfectly frame the lowest and highest data points, the data line is forced to dramatically traverse the entire height of the chart from the bottom left to the top right. We considered expanding the axis to a higher number like 3.0 or 4.0, but doing so would visually flatten the curve; this tight bounding ensures the temperature climb feels relentless and explosive to the viewer.
+                We utilized a standard, connected line chart to plot the continuous chronological data. This is a highly earnest and conventional design choice for time-series data. It accurately and transparently reflects the cumulative, sequential nature of global temperature progression, leaning on the viewer's natural familiarity with standard line graphs to build immediate trust in the visualization.
             </figcaption>
         </figure>
     </section>
@@ -34,15 +36,20 @@
             <img src="vis2.png" alt="Visualization 1" style="width: 650px; max-width: 100%;">
             <figcaption>
                 <strong>Design decisions & rationale:</strong>
-                [Explain design choices here. Use 3 points.]
+                We intentionally filtered the timeline to exclusively show the 2016-2022 window. The year 2016 is a known, unusually warm peak year due to El Niño. By starting our graph on this massive outlier, the subsequent years artificially appear to fluctuate downward or remain flat. This allows us to completely hide the decades of massive, cumulative warming that occurred prior to 2016.
+                We titled the chart "Global Temperatures Have Plateaued Since 2016". This uses authoritative, objective-sounding language to state a highly contested opinion as a definitive fact. By explicitly telling the reader what conclusion to draw before they even look at the data, we strongly anchor their interpretation and frame the climate crisis narrative as overstated.
+                We added a dashed line mapped to a linear trend of +0.006°C/year and explicitly annotated it as "7 years of temperature stability". While mathematically accurate for this hyper-specific 7-year slice, applying a linear trendline to such a short, cherry-picked interval is a severe violation of statistical best practices. It leverages the visual authority of statistical analysis to deceive the reader into believing warming has permanently halted.
+                We expanded the y-axis to range from 0.0 to 2.5. Because the actual data points in this narrow timeframe only fluctuate between 1.29 and 1.55, plotting them on this much larger vertical scale artificially compresses the line. This effectively flattens out any remaining variances, visually supporting the "plateau" narrative far better than a tightly bounded axis would.
             </figcaption>
         </figure>
     </section>
 
     <section>
         <h2>Reflection</h2>
-        <p>[Final reflection write-up here.]</p>
+        <p>Reflection
+The most striking part of this process was how quickly the work of "designing for a side" stopped feeling like an exercise and started feeling like ordinary craft. Building Visualization 1 was straightforward in the technical sense — a line chart of annual temperature change is the kind of figure you would expect to see in a peer-reviewed paper — and yet many of the choices that made it persuasive were the same kinds of choices we labeled "deceptive" in Visualization 2: where to start the x-axis, how tightly to bound the y-axis, which slice of history to foreground. Truncating to 1985 made the climb feel relentless; tightening the y-axis to 0–2°C made the slope dramatic. Neither of those choices is a lie, but each one quietly closes off other readings of the same data. What surprised us was how thin the wall between "framing" and "distortion" turned out to be. By the time we got to Visualization 2 — cherry-picking the post-El Niño 2016–2022 window, fitting a linear trendline across only seven points, expanding the y-axis to 0–2.5°C to flatten the line, and titling the chart "Global Temperatures Have Plateaued Since 2016" — we were not really doing anything categorically different from what we had done in Visualization 1. We were doing more of it, in a direction the underlying data does not actually support.
+That experience reshaped how we now think about ethical analysis and visualization. Our working definition is no longer "show the data truthfully" because, as this project demonstrated, every chart is the product of choices that suppress some readings and amplify others; there is no view from nowhere. A more honest standard is something like fidelity to the question being asked: a visualization is ethical when its design choices are defensible given what the underlying data can and cannot support, and when a careful reader who reconstructed the analysis would arrive at a similar conclusion. By that standard, Visualization 1 is persuasive but defensible — the long-run cumulative warming signal is real, and starting in 1985 dramatizes a trend that holds across many other windows too. Visualization 2 fails this test: the "plateau" disappears the moment you add even one year on either side of the chosen window, and the linear trendline relies on a sample size that no statistician would accept.
+The line we would draw, then, is something like this: a persuasive choice is acceptable when the conclusion it pushes the reader toward survives outside the specific framing of the chart, and it crosses into misleading when the conclusion only exists because of the framing. Truncating an axis to emphasize a real trend is rhetoric; truncating an axis to manufacture a trend that vanishes under any other slice is deception. We want to be honest that this line is fuzzy in practice, and the project made us more sympathetic to journalists and analysts who have to make these calls under deadline pressure. But fuzziness is not the same as absence — and one productive habit we are taking from this assignment is to ask, of every chart we make going forward, whether the headline finding would still hold if we made three or four of the design choices differently. If the answer is no, we are probably the ones being persuaded by our own visualization.</p>
     </section>
-
 </body>
 </html>
