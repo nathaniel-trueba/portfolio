@@ -23,9 +23,12 @@
             <img src="vis1.png" alt="Visualization 1" style="width: 650px; max-width: 100%;">
             <figcaption>
                 <strong>Design decisions & rationale:</strong>
-                We intentionally bounded the x-axis to start at the year 1985. Because 1985 represents a relative dip in historical temperature change, starting the chart here artificially makes the subsequent upward slope look much steeper and more aggressive. While we considered plotting the entire available history of the dataset, truncating the timeline to this specific window maximizes the visual impact and urgency of the warming trend, omitting the more gradual fluctuations of earlier decades.
-                The y-axis is tightly bounded between 0.00 and 2.00. By restricting the vertical axis to perfectly frame the lowest and highest data points, the data line is forced to dramatically traverse the entire height of the chart from the bottom left to the top right. We considered expanding the axis to a higher number like 3.0 or 4.0, but doing so would visually flatten the curve; this tight bounding ensures the temperature climb feels relentless and explosive to the viewer.
-                We utilized a standard, connected line chart to plot the continuous chronological data. This is a highly earnest and conventional design choice for time-series data. It accurately and transparently reflects the cumulative, sequential nature of global temperature progression, leaning on the viewer's natural familiarity with standard line graphs to build immediate trust in the visualization.
+                Score: -1.5
+                Rationale: We intentionally bounded the x-axis to start at the year 1985. Because 1985 represents a relative dip in historical temperature change, starting the chart here artificially makes the subsequent upward slope look much steeper and more aggressive. While we considered plotting the entire available history of the dataset, truncating the timeline to this specific window maximizes the visual impact and urgency of the warming trend, omitting the more gradual fluctuations of earlier decades.
+                Score: -1.0
+                Rationale: The y-axis is tightly bounded between 0.00 and 2.00. By restricting the vertical axis to perfectly frame the lowest and highest data points, the data line is forced to dramatically traverse the entire height of the chart from the bottom left to the top right. We considered expanding the axis to a higher number like 3.0 or 4.0, but doing so would visually flatten the curve; this tight bounding ensures the temperature climb feels relentless and explosive to the viewer.
+                Score: 1.5
+                Rationale: We utilized a standard, connected line chart to plot the continuous chronological data. This is a highly earnest and conventional design choice for time-series data. It accurately and transparently reflects the cumulative, sequential nature of global temperature progression, leaning on the viewer's natural familiarity with standard line graphs to build immediate trust in the visualization.
             </figcaption>
         </figure>
     </section>
@@ -36,10 +39,14 @@
             <img src="vis2.png" alt="Visualization 1" style="width: 650px; max-width: 100%;">
             <figcaption>
                 <strong>Design decisions & rationale:</strong>
-                We intentionally filtered the timeline to exclusively show the 2016-2022 window. The year 2016 is a known, unusually warm peak year due to El Niño. By starting our graph on this massive outlier, the subsequent years artificially appear to fluctuate downward or remain flat. This allows us to completely hide the decades of massive, cumulative warming that occurred prior to 2016.
-                We titled the chart "Global Temperatures Have Plateaued Since 2016". This uses authoritative, objective-sounding language to state a highly contested opinion as a definitive fact. By explicitly telling the reader what conclusion to draw before they even look at the data, we strongly anchor their interpretation and frame the climate crisis narrative as overstated.
-                We added a dashed line mapped to a linear trend of +0.006°C/year and explicitly annotated it as "7 years of temperature stability". While mathematically accurate for this hyper-specific 7-year slice, applying a linear trendline to such a short, cherry-picked interval is a severe violation of statistical best practices. It leverages the visual authority of statistical analysis to deceive the reader into believing warming has permanently halted.
-                We expanded the y-axis to range from 0.0 to 2.5. Because the actual data points in this narrow timeframe only fluctuate between 1.29 and 1.55, plotting them on this much larger vertical scale artificially compresses the line. This effectively flattens out any remaining variances, visually supporting the "plateau" narrative far better than a tightly bounded axis would.
+                Score: -2.0
+                Rationale: We intentionally filtered the timeline to exclusively show the 2016-2022 window. The year 2016 is a known, unusually warm peak year due to El Niño. By starting our graph on this massive outlier, the subsequent years artificially appear to fluctuate downward or remain flat. This allows us to completely hide the decades of massive, cumulative warming that occurred prior to 2016.
+                Score: -1.5
+                Rationale: We titled the chart "Global Temperatures Have Plateaued Since 2016". This uses authoritative, objective-sounding language to state a highly contested opinion as a definitive fact. By explicitly telling the reader what conclusion to draw before they even look at the data, we strongly anchor their interpretation and frame the climate crisis narrative as overstated.
+                Score: -2.0
+                Rationale: We added a dashed line mapped to a linear trend of +0.006°C/year and explicitly annotated it as "7 years of temperature stability". While mathematically accurate for this hyper-specific 7-year slice, applying a linear trendline to such a short, cherry-picked interval is a severe violation of statistical best practices. It leverages the visual authority of statistical analysis to deceive the reader into believing warming has permanently halted.
+                Score: -1.5
+                Rationale: We expanded the y-axis to range from 0.0 to 2.5. Because the actual data points in this narrow timeframe only fluctuate between 1.29 and 1.55, plotting them on this much larger vertical scale artificially compresses the line. This effectively flattens out any remaining variances, visually supporting the "plateau" narrative far better than a tightly bounded axis would.
             </figcaption>
         </figure>
     </section>
