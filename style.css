@@ -100,12 +100,12 @@ button {
   overflow: visible;
 
   &:has(path:hover) {
-    path:not(:hover) {
+    & path:not(:hover) {
       opacity: 0.5;
     }
   }
 
-  path {
+  & path {
     transition: 300ms;
     cursor: pointer;
   }
