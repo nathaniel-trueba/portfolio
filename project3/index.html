@@ -173,8 +173,7 @@
             <svg id="stripes-chart"></svg>
         </div>
         <figcaption>
-            <strong>Design decisions &amp; rationale:</strong>
-            <p>Warming stripes, originally developed by climate scientist Ed Hawkins, encode temperature anomaly purely through color with no axes or gridlines — the goal is immediate visual impact rather than precise readout. A diverging blue→white→red color scale is appropriate here (unlike the map) because the stripes span both negative and positive anomalies relative to the baseline, making the zero crossing meaningful. The only interaction is click-to-inspect, which keeps the graphic clean while still supporting details-on-demand. Data is drawn directly from NASA GISTEMP v4 via <code>historical.csv</code>.</p>
+    
         </figcaption>
     </figure>
 </section>
@@ -278,9 +277,7 @@ async function drawWarmingStripes() {
             <svg id="race-chart"></svg>
         </div>
         <figcaption>
-            <strong>Design decisions &amp; rationale:</strong>
-            <p>A ranked horizontal bar chart makes it easy to compare magnitudes across countries and track how the ranking shifts over time. Sorting by anomaly descending puts the most-at-risk countries at the top, which is the most policy-relevant ordering. The year slider creates a race-like animation effect as bars grow and reorder — this reveals that while the top countries (Russia, Kazakhstan, Mongolia) stay consistently high, the relative gaps widen dramatically under SSP5-8.5. Color encodes the same sequential warming scale used in the choropleth map for visual consistency. Data comes from <code>regional_warming.csv</code>.</p>
-        </figcaption>
+            </figcaption>
     </figure>
 </section>
 
