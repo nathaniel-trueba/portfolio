@@ -100,12 +100,12 @@
 
     <section>
         <h2>Overview</h2>
-        <p>How will Earth's average surface temperature evolve over the next century and how much does the outcome depend on emissions today? This project combines observed historical temperature data from NASA GISTEMP with CMIP6 multi-model projections from the IPCC Sixth Assessment Report to explore three Shared Socioeconomic Pathway scenarios. All temperature anomalies are reported relative to the 1850–1900 pre-industrial baseline. Data processing was performed in a companion Jupyter notebook; the visualizations load the resulting CSVs directly.</p>
+        <p>How will Earth's average surface temperature evolve over the next century and how much does the outcome depend on emissions today? This project combines observed historical temperature data from NASA GISTEMP with CMIP6 multi-model projections from the IPCC Sixth Assessment Report to explore three Shared Socioeconomic Pathway scenarios. All temperature anomalies are reported relative to the 1850–1900 pre-industrial baseline. Temperature projections are derived from a 3-model CMIP6 ensemble (ACCESS-CM2, CanESM5, MPI-ESM1-2-LR) accessed directly from the Pangeo Google Cloud CMIP6 archive. Ensemble medians are anchored to decade-period multi-model means from Hauser et al. (ETH Zurich) which pre-computed area-weighted global mean temperature anomalies from raw CMIP6 output across 40+ models. Precipitation projections are computed from the same three models, streaming pr (precipitation flux) directly from the CMIP6 zarr store and converting to mm/day. All temperature anomalies and precipitation changes are reported relative to the 1850–1900 pre-industrial baseline. Data processing was performed in a companion Jupyter notebook using xarray, gcsfs, and pandas. The visualizations load the resulting CSVs directly.</p>
     </section>
 
     <section>
         <h2>Visualization 1 — Temperature Anomaly Over Time</h2>
-        <p>Global mean surface temperature anomaly (°C above pre-industrial baseline) from 1880 to 2100. Historical observations come from NASA GISTEMP v4, rebased to 1850–1900 by adding +0.69°C (IPCC AR6 Cross-Chapter Box 1.2). Projection bands show the IPCC AR6 assessed likely range for each scenario. Toggle scenarios on/off; hover for exact values.</p>
+        <p>Global mean surface temperature anomaly (°C above pre-industrial baseline) from 1880 to 2100. Historical observations come from NASA GISTEMP, rebased to 1850–1900 by adding +0.69°C. Projection bands show the IPCC AR6 assessed likely range for each scenario. Scenarios can be toggled on and off and you can hover over a line for exact values.</p>
         <figure>
             <div class="controls">
                 <span class="control-label">Scenarios:</span>
@@ -128,7 +128,7 @@
 
     <section>
         <h2>Visualization 2 — Regional Warming by Country</h2>
-        <p>Projected surface temperature anomaly (°C above pre-industrial baseline) by country, from 2024 to 2100. Values are derived from IPCC AR6 WGI Atlas assessed regional warming medians for 46 macro-regions; each country is assigned to its AR6 reference region. Drag the year slider or change the scenario to update the map. Hover for country-level details.</p>
+        <p>Projected surface temperature anomaly (°C above pre-industrial baseline) by country, from 2024 to 2100. Values are derived from IPCC AR6 WGI Atlas assessed regional warming medians for 46 regions; each country is assigned to its AR6 reference region. Drag the year slider or change the scenario to update the map. Hover for country-level details.</p>
         <figure>
             <div class="controls">
                 <span class="control-label">Scenario:</span>
@@ -167,7 +167,7 @@
 
 <section>
     <h2>Visualization 4 — Warming Stripes</h2>
-    <p>Each stripe represents one year of global mean temperature anomaly from 1880 to present, colored from deep blue (cooler) to deep red (warmer) relative to the 1850–1900 pre-industrial baseline. The shift from blue to red across the chart makes the long-run warming trend immediately visible. Click any stripe for the exact value.</p>
+    <p>Each stripe represents one year of global mean temperature anomaly from 1880 to present, colored with deep blue for cooler and with deep red for warmer, relative to the 1850–1900 pre-industrial baseline. The shift towards complete dark red across the chart makes the long-run warming trend immediately visible. Click any stripe for the exact value.</p>
     <figure>
         <div class="viz-container">
             <svg id="stripes-chart"></svg>
@@ -409,7 +409,7 @@ async function drawRaceChart() {
 
 <section>
     <h2>Visualization 6 — Temperature vs Precipitation Change</h2>
-    <p>Global mean precipitation change (% vs 1850–1900 baseline) plotted against temperature anomaly for each SSP scenario at a selected year. Derived from CMIP6 ensemble medians (ACCESS-CM2, CanESM5, MPI-ESM1-2-LR). As warming increases, the global water cycle intensifies — wetter conditions globally, though regional patterns vary. Drag the slider to watch both variables evolve together.</p>
+    <p>Global mean precipitation change (% vs 1850–1900 baseline) plotted against temperature anomaly for each SSP scenario at a selected year. Derived from CMIP6 ensemble medians (ACCESS-CM2, CanESM5, MPI-ESM1-2-LR). As warming increases, the global water cycle intensifies leading to wetter conditions globally with variance in regional patterns. Drag the slider to watch both variables evolve over time.</p>
     <figure>
         <div class="slider-row">
             <span class="control-label">Year:</span>
