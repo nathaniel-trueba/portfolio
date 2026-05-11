@@ -179,6 +179,9 @@
 </section>
 
 <script>
+// ─────────────────────────────────────────────
+// VIZ 4: WARMING STRIPES
+// ─────────────────────────────────────────────
 async function drawWarmingStripes() {
     const histRaw = await d3.csv('data/historical.csv', d => ({
         year: +d.year,
@@ -282,6 +285,9 @@ async function drawWarmingStripes() {
 </section>
 
 <script>
+// ─────────────────────────────────────────────
+// VIZ 5: COUNTRY WARMING RACE
+// ─────────────────────────────────────────────
 async function drawRaceChart() {
     const regionalRaw = await d3.csv('data/regional_warming.csv', d => ({
         iso: d.iso,
@@ -400,6 +406,21 @@ async function drawRaceChart() {
     });
 }
 </script>
+
+<section>
+    <h2>Visualization 6 — Temperature vs Precipitation Change</h2>
+    <p>Global mean precipitation change (% vs 1850–1900 baseline) plotted against temperature anomaly for each SSP scenario at a selected year. Derived from CMIP6 ensemble medians (ACCESS-CM2, CanESM5, MPI-ESM1-2-LR). As warming increases, the global water cycle intensifies — wetter conditions globally, though regional patterns vary. Drag the slider to watch both variables evolve together.</p>
+    <figure>
+        <div class="slider-row">
+            <span class="control-label">Year:</span>
+            <span class="year-display" id="scatter-year-display">2030</span>
+            <input type="range" id="scatter-year-slider" min="2015" max="2100" value="2030" step="1">
+        </div>
+        <div class="viz-container">
+            <svg id="scatter-chart"></svg>
+        </div>
+    </figure>
+</section>
 
 <script>
 const colors = {
@@ -875,6 +896,128 @@ async function drawBarChart() {
         update(year);
     });
 }
+
+// ─────────────────────────────────────────────
+// VIZ 6: TEMPERATURE VS PRECIPITATION SCATTER
+// ─────────────────────────────────────────────
+async function drawScatter() {
+    const [projRaw, precRaw] = await Promise.all([
+        d3.csv('data/projections.csv', d => ({
+            year: +d.year,
+            scenario: d.scenario,
+            median: +d.median
+        })),
+        d3.csv('data/precipitation.csv', d => ({
+            year: +d.year,
+            scenario: d.scenario,
+            pr_pct_change: +d.pr_pct_change
+        }))
+    ]);
+
+    const el = document.getElementById('scatter-chart');
+    const W = el.parentElement.clientWidth;
+    const margin = { top: 30, right: 120, bottom: 55, left: 60 };
+    const H = Math.min(400, W * 0.5);
+    const w = W - margin.left - margin.right;
+    const h = H - margin.top - margin.bottom;
+
+    const svg = d3.select('#scatter-chart').attr('width', W).attr('height', H);
+    svg.selectAll('*').remove();
+    const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+    const xScale = d3.scaleLinear().domain([1.0, 5.5]).range([0, w]);
+    const yScale = d3.scaleLinear().domain([0, 12]).range([h, 0]);
+
+    // Grid
+    g.append('g').attr('class', 'grid')
+        .call(d3.axisLeft(yScale).tickSize(-w).tickFormat(''));
+    g.selectAll('.grid line').attr('stroke', '#eee').attr('stroke-dasharray', '3,3');
+    g.selectAll('.grid path').attr('stroke', 'none');
+
+    // Axes
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${h})`)
+        .call(d3.axisBottom(xScale).tickFormat(d => `+${d}°C`));
+    g.append('g').attr('class', 'axis')
+        .call(d3.axisLeft(yScale).tickFormat(d => `+${d}%`));
+
+    // Axis labels
+    g.append('text').attr('class', 'annotation-text')
+        .attr('x', w / 2).attr('y', h + 44)
+        .attr('text-anchor', 'middle')
+        .text('Temperature Anomaly (°C vs. 1850–1900)');
+    g.append('text').attr('class', 'annotation-text')
+        .attr('transform', 'rotate(-90)')
+        .attr('x', -h / 2).attr('y', -48)
+        .attr('text-anchor', 'middle')
+        .text('Precipitation Change (% vs. 1850–1900)');
+
+    const scenarioLabels = { ssp126: 'SSP1-2.6', ssp245: 'SSP2-4.5', ssp585: 'SSP5-8.5' };
+    const scenarios = ['ssp126', 'ssp245', 'ssp585'];
+
+    // Legend
+    const legend = g.append('g').attr('transform', `translate(${w + 10}, 10)`);
+    scenarios.forEach((s, i) => {
+        legend.append('circle').attr('cx', 0).attr('cy', i * 22).attr('r', 7)
+            .attr('fill', colors[s]).attr('opacity', 0.85);
+        legend.append('text').attr('x', 12).attr('y', i * 22 + 4)
+            .attr('font-size', 11).attr('fill', '#444')
+            .text(scenarioLabels[s]);
+    });
+
+    function update(year) {
+        scenarios.forEach(s => {
+            const tempRow = projRaw.find(d => d.scenario === s && d.year === year);
+            const precRow = precRaw.find(d => d.scenario === s && d.year === year);
+            if (!tempRow || !precRow) return;
+
+            // Dot
+            let dot = g.select(`.scatter-dot-${s}`);
+            if (dot.empty()) dot = g.append('circle')
+                .attr('class', `scatter-dot-${s}`)
+                .attr('r', 10)
+                .attr('fill', colors[s])
+                .attr('opacity', 0.85)
+                .attr('stroke', '#fff')
+                .attr('stroke-width', 1.5)
+                .style('cursor', 'pointer')
+                .on('mouseover', function(event) {
+                    const tr = projRaw.find(d => d.scenario === s && d.year === +document.getElementById('scatter-year-slider').value);
+                    const pr = precRaw.find(d => d.scenario === s && d.year === +document.getElementById('scatter-year-slider').value);
+                    showTooltip(`<strong>${scenarioLabels[s]}</strong>Temp: +${tr.median.toFixed(2)}°C<br>Precip: +${pr.pr_pct_change.toFixed(2)}%`, event);
+                    d3.select(this).attr('r', 13);
+                })
+                .on('mousemove', moveTooltip)
+                .on('mouseleave', function() {
+                    hideTooltip();
+                    d3.select(this).attr('r', 10);
+                });
+
+            dot.transition().duration(200)
+                .attr('cx', xScale(tempRow.median))
+                .attr('cy', yScale(precRow.pr_pct_change));
+
+            // Label
+            let label = g.select(`.scatter-label-${s}`);
+            if (label.empty()) label = g.append('text')
+                .attr('class', `scatter-label-${s}`)
+                .attr('font-size', 10).attr('fill', colors[s])
+                .attr('text-anchor', 'middle');
+            label.transition().duration(200)
+                .attr('x', xScale(tempRow.median))
+                .attr('y', yScale(precRow.pr_pct_change) - 14)
+                .text(scenarioLabels[s]);
+        });
+    }
+
+    update(2030);
+
+    document.getElementById('scatter-year-slider').addEventListener('input', function() {
+        const year = +this.value;
+        document.getElementById('scatter-year-display').textContent = year;
+        update(year);
+    });
+}
+
 // ─────────────────────────────────────────────
 // INIT
 // ─────────────────────────────────────────────
@@ -883,6 +1026,7 @@ drawMap();
 drawBarChart();
 drawWarmingStripes();
 drawRaceChart();
+drawScatter();
 
 </script>
 </body>
