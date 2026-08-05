@@ -47,6 +47,28 @@ nav a:hover {
   background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  border: 1px solid var(--color-accent);
+  border-radius: 2em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-links a:hover {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
 form {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -321,22 +343,4 @@ circle.selected {
   font-size: 2em;
   margin: 0;
   font-weight: 400;
-}
-
-#profile-stats dl {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-#profile-stats dt {
-  grid-row: 1;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  color: gray;
-}
-
-#profile-stats dd {
-  grid-row: 2;
-  font-size: 2em;
-  margin: 0;
 }

@@ -14,9 +14,6 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: 'Resume' },
-  { url: 'project2/', title: 'Project 2' },
-  { url: 'project3/', title: 'Project 3' },
-  { url: 'meta/', title: 'Meta' },
   { url: 'https://github.com/nathaniel-trueba', title: 'GitHub' }
 ];
 
@@ -125,8 +122,4 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     `;
     containerElement.appendChild(article);
   }
-}
-
-export async function fetchGitHubData(username) {
-  return fetchJSON(`https://api.github.com/users/${username}`);
 }
