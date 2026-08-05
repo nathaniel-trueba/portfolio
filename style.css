@@ -130,6 +130,16 @@ button:hover {
   margin: 0;
 }
 
+.projects article img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-body p {
+  margin: 0;
+}
+
 .project-year {
   margin: 0.25em 0 0;
   font-size: 0.85em;
