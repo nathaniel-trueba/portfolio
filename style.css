@@ -91,8 +91,27 @@ select {
   box-sizing: border-box;
 }
 
+input,
+textarea {
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 0.25em;
+  padding: 0.4em 0.6em;
+}
+
 button {
   grid-column: 1 / -1;
+  justify-self: end;
+  width: auto;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 2em;
+  background-color: var(--color-accent);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: color-mix(in oklch, var(--color-accent), black 15%);
 }
 
 .projects {
@@ -196,7 +215,7 @@ h1 {
 }
 
 .resume {
-  max-width: 70ch;
+  max-width: 85ch;
   margin-inline: auto;
   padding: 2em;
   background: var(--resume-bg);

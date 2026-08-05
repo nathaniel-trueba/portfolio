@@ -11,8 +11,9 @@
     <div class="resume">
     <div class="resume-header">
     <h2>Nathaniel Trueba</h2>
-    <p>(559) 936-6939 | ntrueba@ucsd.edu | 
-        <a href="https://www.linkedin.com/in/nathaniel-trueba" target="_blank">LinkedIn</a>
+    <p>ntrueba@ucsd.edu |
+        <a href="https://www.linkedin.com/in/trueba-nathaniel" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/nathaniel-trueba" target="_blank">GitHub</a>
     </p>
     </div>
 
@@ -22,7 +23,15 @@
             <h3>University of California, San Diego</h3>
             <div class="resume-row">
             <p>B.S. Data Science and Machine Learning</p>
-            <time>Graduating May 2027</time>
+            <time>September 2025 – May 2027</time>
+        </div>
+        </article>
+
+        <article>
+            <h3>San Diego Miramar College</h3>
+            <div class="resume-row">
+            <p>Associate in Data Science for Transfer</p>
+            <time>January 2023 – May 2025</time>
         </div>
         </article>
     </section>
@@ -30,16 +39,29 @@
     <section>
         <h2>Experience</h2>
         <article>
-            <h3>Undergraduate Research Assistant  --  Air-Sea Interaction Lab</h3>
+            <h3>Data Science Intern  --  Marine Physical Laboratory</h3>
             <div class="resume-row">
-            <p>Scripps Institution of Oceanography</p> 
-            <time>December 2025 – Present</time>
+            <p>Scripps Institution of Oceanography</p>
+            <time>June 2026 – Present</time>
         </div>
             <ul>
-                <li>Engineered digital elevation and surface models from LiDAR datasets with validated quality control for contract deliverable and research publication.</li>
-                <li>Classified LiDAR point clouds to extract ground control points and shoreline contours.</li>
-                <li>Built GIS/LiDAR workflows using QGIS, QT Modeler, GRASS GIS for terrain modeling and flood-risk assessments.</li>
-                <li>Designed structured geospatial pipelines ensuring reproducibility and longevity.</li>
+                <li>Designed and implemented a Python-based denoising and quality-control pipeline for airborne LiDAR point clouds, processing 40 datasets each averaging 360 million points to prepare surface data for classification.</li>
+                <li>Trained a random forest classifier to distinguish sea-ice leads from ice surfaces, achieving 89% accuracy across processed LiDAR datasets, contributing to NASA and the ESA's CRISTAL satellite calibration.</li>
+                <li>Analyzed classification outputs to visualize surface distributions and evaluate performance across 40 point clouds.</li>
+                <li>Extended the classification pipeline with unsupervised clustering to differentiate ice types in the Arctic Ocean.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Research Assistant  --  Air-Sea Interaction Lab</h3>
+            <div class="resume-row">
+            <p>Scripps Institution of Oceanography</p>
+            <time>December 2025 – June 2026</time>
+        </div>
+            <ul>
+                <li>Engineered digital elevation and surface models from LiDAR datasets using GIS tools for predictive flooding models and coastal terrain analyses for the US Navy (NAVFAC) from a Modular Aerial Sensing System (MASS).</li>
+                <li>Processed LiDAR point clouds from a Modular Aerial Sensing System to extract ground control points and generate centimeter-resolution surface models for use in NAVFAC flood-risk and coastal inundation assessments.</li>
+                <li>Designed and maintained geospatial data pipelines and upheld documentation standards, ensuring reproducibility and long-term usability of model results across multiple GIS and modeling–assessment projects.</li>
             </ul>
         </article>
     </section>
@@ -48,36 +70,26 @@
         <h2>Projects</h2>
 
         <article>
-            <h3>TubeScope - Lifecycle Analytics of Trending YouTube Videos</h3>
-            <p>Python, YouTube API, Pandas, Streamlit</p>
+            <h3>Tumor Sense</h3>
+            <p>Python, Pandas, Scikit-learn, Next.js, React, Seaborn, Matplotlib, SciPy</p>
+            <p><a href="https://tumorsense-ntrueba-5031s-projects.vercel.app" target="_blank">tumorsense-ntrueba-5031s-projects.vercel.app</a></p>
             <ul>
-                <li>Designed an end-to-end analytics pipeline analyzing YouTube virality across 1000+ videos.</li>
-                <li>Automated data collection and applied Kaplan-Meier survival analysis.</li>
-                <li>Built predictive models using linear regression and deployed a Streamlit dashboard.</li>
+                <li>Built a full-stack clinical decision tool using a scikit-learn SVM that classifies breast tumors as malignant or benign from 30 FNA-derived cell nucleus measurements.</li>
+                <li>Trained an RBF-kernel SVM with GridSearchCV optimized for malignant-class recall, achieving ROC-AUC greater than 0.97 and greater than 95% recall to minimize false negatives for clinical safety.</li>
+                <li>Chose support vector machines over neural networks given the small dataset size, where maximum-margin geometry outperforms deep models prone to overfitting.</li>
+                <li>Served the trained SVM via a FastAPI REST endpoint with Pydantic input validation, deployed to Vercel alongside the React frontend for a fully integrated web application.</li>
             </ul>
         </article>
 
         <article>
-            <h3>Surf Quality Forecast Dashboard</h3>
-            <p>Python, Pandas, NumPy, Matplotlib, Time Series Analysis, API Integration</p>
+            <h3>Tube Scope</h3>
+            <p>Python, YouTube API, Pandas, Scikit-learn, Matplotlib, SciPy, Streamlit</p>
+            <p><a href="https://tubescopeds3.streamlit.app" target="_blank">tubescopeds3.streamlit.app</a></p>
             <ul>
-                <li>Built a real-time forecasting dashboard using open-source NOAA data.</li>
-                <li>Engineered domain-specific features to improve prediction accuracy.</li>
-                <li>Implemented SMS alerts for surf condition thresholds.</li>
-            </ul>
-        </article>
-    </section>
-
-    <section>
-        <h2>Leadership</h2>
-        <article>
-            <h3>Computer Science Club – Vice President of Data Science</h3>
-            <p>San Diego Miramar College — San Diego, CA</p>
-            <time>September 2024 – June 2025</time>
-            <ul>
-                <li>Expanded club resources, industry connections, and student opportunities.</li>
-                <li>Mentored students through guided data science projects.</li>
-                <li>Organized networking events and industry talks.</li>
+                <li>Engineered an end-to-end ML pipeline using the YouTube API to collect and process daily trending data across 1,600+ videos, engineering structured features from channel metrics, video duration, and textual complexity.</li>
+                <li>Diagnosed data leakage in a regression approach and pivoted to classification to predict trending video survival.</li>
+                <li>Applied Kaplan-Meier survival analysis to characterize trending drop-off dynamics, motivating a RandomForestClassifier that achieved 68% recall on viral videos, 4x above the 17% base rate.</li>
+                <li>Deployed a live Streamlit dashboard integrating real-time YouTube API calls to score and display current trending videos by predicted viral probability, with an interactive model tester for user simulations.</li>
             </ul>
         </article>
     </section>
@@ -85,23 +97,23 @@
     <section>
         <h2>Skills</h2>
         <article>
-            <h3>Programming & Visualization</h3>
-            <p>Pandas, NumPy, SQL, Scikit-Learn, Tableau, Matplotlib, Seaborn, AWS</p>
+            <h3>Languages, Web & Tools</h3>
+            <p>Python, SQL, Java, C++, Git, AWS, QGIS, QT Modeler, HTML, React, Next.js, Vercel</p>
         </article>
 
         <article>
-            <h3>Machine Learning & Prediction</h3>
-            <p>Regression, Feature Engineering, Time-Series Analysis, XGBoost, Random Forest, K-Means, Neural Networks, Sentiment Analysis, Support Vector Machines</p>
+            <h3>Libraries & Visualization</h3>
+            <p>Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Plotly, Tableau</p>
         </article>
 
         <article>
-            <h3>Math and Statistics</h3>
-            <p>Hypothesis Testing, A/B Testing, Probability, Linear Algebra, Principal Component Analysis</p>
+            <h3>Machine Learning & Predictive Modeling</h3>
+            <p>Regression, Feature Engineering, Time-Series Analysis, XGBoost, Random Forest, Classification & Clustering, Neural Networks, Natural Language Processing, SVM, GridSearchCV</p>
         </article>
 
         <article>
             <h3>Relevant Coursework</h3>
-            <p>Python, Data Structures & Algorithms, Java, C++, Linear Algebra, Data Science in Practice, Exploratory Data Analysis, Fundamentals of Machine Learning, Statistical Methods</p>
+            <p>Python Programming, Data Structures & Algorithms, Linear Algebra, Data Science, Exploratory Data Analysis, Theoretical Foundations of Machine Learning, Statistical Methods, Data Science in Practice</p>
         </article>
     </section>
 </div>
