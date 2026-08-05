@@ -2,30 +2,30 @@
   {
     "title": "CRISTAL Satellite Calibration/Validation",
     "year": "2026",
-    "image": "../images/project_photos/CRISTAL.jpg",
+    "image": "images/project_photos/CRISTAL.jpg",
     "description": "CRISTAL is a satellite that will be launched in 2026 by the ESA and NASA to measure polar ice formation. My work involves buidling a classifier to distinguish ice types in satellite imagery to contribute to sea-ice thickness measurements."},
   {
     "title": "TumorSense",
     "year": "2026",
-    "image": "../images/project_photos/coming-soon.svg",
+    "image": "images/project_photos/coming-soon.svg",
     "description": "TumorSense is a classification model that predicts whether a tumor is benign or malignant. The model uses support vector machines with a radial basis function to map data into a higher dimensional space to find an optimal decision boundary."
   },
   {
     "title": "NAVFAC Flood Modeling",
     "year": "2026",
-    "image": "../images/project_photos/navfac.jpeg",
+    "image": "images/project_photos/navfac.jpeg",
     "description": "Using geospatial tools and LiDAR point clouds, I reclassified points, built elevation and surface models to simulate flooding at Navy bases around the world. This project was a contract conducted by the Navy through the Scripps Institution of Oceanography."
   },
   {
     "title": "TubeScope",
     "year": "2025",
-    "image": "../images/project_photos/coming-soon.svg",
+    "image": "images/project_photos/coming-soon.svg",
     "description": "TubeScope is a data collection and machine learning platform that tracks YouTube Trending videos and predicts whether a video will remain on the trending page for more than one day. This is designed to be a B2B service for advertisers and creators to optimize marketing decisions."
   },
   {
     "title": "San Diego Surf Prediction",
     "year": "2024",
-    "image": "../images/project_photos/surf.jpg",
+    "image": "images/project_photos/surf.jpg",
     "description": "I built a dashboard that scores data from NOAA buoys into a Surf Quality Index to detect 2–4 hour best surf windows. This project is specific to the North San Diego area to provide accurate forecasting for UCSD students and surf lessons done through the recreation department."
   }
 ]
