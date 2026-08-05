@@ -11,6 +11,12 @@
     "description": "TumorSense is a classification model that predicts whether a tumor is benign or malignant. The model uses support vector machines with a radial basis function to map data into a higher dimensional space to find an optimal decision boundary."
   },
   {
+    "title": "NAVFAC Flood Modeling",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Using geospatial tools and LiDAR point clouds, I reclassified points, built elevation and surface models to simulate flooding at Navy bases around the world. This project was a contract conducted by the Navy through the Scripps Institution of Oceanography."
+  },
+  {
     "title": "TubeScope",
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
@@ -21,12 +27,6 @@
     "year": "2024",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "I built a dashboard that scores data from NOAA buoys into a Surf Quality Index to detect 2–4 hour best surf windows. This project is specific to the North San Diego area to provide accurate forecasting for UCSD students and surf lessons done through the recreation department."
-  },
-  {
-    "title": "NAVFAC Flood Modeling",
-    "year": "2026",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Using geospatial tools and LiDAR point clouds, I reclassified points, built elevation and surface models to simulate flooding at Navy bases around the world. This project was a contract conducted by the Navy through the Scripps Institution of Oceanography."
   },
   {
     "title": "Exploratory Data Analysis: Climate Trends",
