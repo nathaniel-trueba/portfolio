@@ -1,5 +1,10 @@
 [
   {
+    "title": "CRISTAL Satellite Calibration/Validation",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "CRISTAL is a satellite that will be launched in 2026 by the ESA and NASA to measure polar ice formation. My work involves buidling a classifier to distinguish ice types in satellite imagery to contribute to sea-ice thickness measurements."},
+  {
     "title": "TumorSense",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
@@ -34,12 +39,6 @@
     "year": "2022",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Built and evaluated multiple linear regression models to predict housing prices in San Diego County using features such as square footage, proximity to coast, and school district ratings."
-  },
-  {
-    "title": "Lorem ipsum dolor sit amet.",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
   },
   {
     "title": "Consectetur adipisicing elit.",
