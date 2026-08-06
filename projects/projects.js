@@ -6,21 +6,14 @@ const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
-const projectsTitle = document.querySelector('.projects-title');
-projectsTitle.textContent = `Projects (${projects.length})`;
-
 const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 const colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-let query = '';
 let selectedYear = null;
 
 function getFilteredProjects() {
   return projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    let matchesQuery = values.includes(query.toLowerCase());
-    let matchesYear = selectedYear === null || project.year === selectedYear;
-    return matchesQuery && matchesYear;
+    return selectedYear === null || project.year === selectedYear;
   });
 }
 
@@ -39,7 +32,7 @@ function renderPieChart(projectsGiven) {
   let arcData = sliceGenerator(data);
   let arcs = arcData.map((d) => arcGenerator(d));
 
-  let svg = d3.select('svg');
+  let svg = d3.select('#projects-pie-plot');
   svg.selectAll('path').remove();
   d3.select('.legend').selectAll('li').remove();
 
@@ -79,15 +72,3 @@ function renderPieChart(projectsGiven) {
 }
 
 renderPieChart(projects);
-
-const searchInput = document.querySelector('.searchBar');
-
-searchInput.addEventListener('input', (event) => {
-  query = event.target.value;
-  let searchFiltered = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
-  });
-  renderProjects(getFilteredProjects(), projectsContainer, 'h2');
-  renderPieChart(searchFiltered);
-});

@@ -7,7 +7,7 @@
   {
     "title": "TumorSense",
     "year": "2026",
-    "image": "images/project_photos/coming-soon.svg",
+    "image": "images/project_photos/tumorsense.png",
     "description": "TumorSense is a classification model that predicts whether a tumor is benign or malignant. The model uses support vector machines with a radial basis function to map data into a higher dimensional space to find an optimal decision boundary."
   },
   {
@@ -19,7 +19,7 @@
   {
     "title": "TubeScope",
     "year": "2025",
-    "image": "images/project_photos/coming-soon.svg",
+    "image": "images/project_photos/tubescope.png",
     "description": "TubeScope is a data collection and machine learning platform that tracks YouTube Trending videos and predicts whether a video will remain on the trending page for more than one day. This is designed to be a B2B service for advertisers and creators to optimize marketing decisions."
   },
   {
