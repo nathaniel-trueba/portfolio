@@ -114,6 +114,30 @@ button:hover {
   background-color: color-mix(in oklch, var(--color-accent), black 15%);
 }
 
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 1.5em;
+}
+
+.intro img {
+  flex-shrink: 0;
+  border-radius: 0.5em;
+}
+
+.intro p {
+  flex: 1;
+  margin: 0;
+}
+
+@media (max-width: 40em) {
+  .intro {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -222,6 +246,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 400%;
+}
+
+.section-title {
+  font-size: 200%;
+  margin-top: 1.5em;
 }
 
 .resume {
